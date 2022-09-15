@@ -1,0 +1,64 @@
+<div>
+    <h1>Calculadora de câmbio de moeda</h1>
+
+    <div class="mb-3">
+        <label class="form-label" for="exampleFormControlInput1">Montante</label>
+        <input
+                [(ngModel)]="price"
+                class="form-control"
+                id="exampleFormControlInput1"
+                name="montante"
+                placeholder="##.00"
+                type="text"
+        />
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <select
+                    [(ngModel)]="origin"
+                    aria-label=".form-select-sm example"
+                    class="form-select form-select-lg"
+            >
+                <option value=""></option>
+                <option #final *ngFor="let data of keys" value="{{data}}">{{data}}</option>
+            </select>
+        </div>
+        <div class="col-6">
+            <div class="row">
+                <div class="col-4">
+                    <select
+                            [(ngModel)]="destination"
+                            class="form-select form-select-lg"
+                    >
+                        <option value=""></option>
+                        <option #final *ngFor="let data of keys" value="{{data}}">{{data}}</option>
+                    </select>
+                    {{price}}
+                </div>
+                <div class="col-8">
+                    <div class="input-group input-group-lg">
+              <span class="input-group-text" id="basic-addon1"
+              >Valor Convertido</span
+              >
+                        <input
+                                [(ngModel)]="result"
+                                aria-describedby="basic-addon1"
+                                aria-label="Username"
+                                class="form-control"
+                                disabled
+                                name="result"
+                                placeholder="0"
+                                type="text"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 my-2 mx-auto">
+            <button (click)="convert()" class="btn btn-primary">
+                Converter
+            </button>
+        </div>
+    </div>
+
+</div>
