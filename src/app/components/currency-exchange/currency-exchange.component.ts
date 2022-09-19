@@ -20,6 +20,7 @@ export class CurrencyExchangeComponent implements OnInit {
     origin!: string;
     destination!: string
 
+
     constructor(private currency: CurrencyExchangeService) {
     }
 

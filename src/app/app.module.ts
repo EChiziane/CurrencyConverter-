@@ -13,6 +13,7 @@ import {HeaderComponent} from './components/header/header.component';
 import {CurrencyExchangeComponent} from './components/currency-exchange/currency-exchange.component';
 import {CurrencyExchangeService} from './services/currency-exchange.service';
 import {MatButtonModule} from "@angular/material/button";
+import { CountryComponent } from './components/country/country.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import {MatButtonModule} from "@angular/material/button";
         AppComponent,
         HeaderComponent,
         HomeComponent,
-        CurrencyExchangeComponent
+        CurrencyExchangeComponent,
+        CountryComponent
     ],
     imports: [
         BrowserModule,
