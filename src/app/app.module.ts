@@ -16,6 +16,7 @@ import {MatButtonModule} from "@angular/material/button";
 import { CountryComponent } from './components/country/country.component';
 
 
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -31,7 +32,7 @@ import { CountryComponent } from './components/country/country.component';
         HttpClientModule,
         FormsModule,
         MatStepperModule,
-        MatButtonModule
+        MatButtonModule,
     ],
     providers: [CurrencyExchangeService],
     bootstrap: [AppComponent]
